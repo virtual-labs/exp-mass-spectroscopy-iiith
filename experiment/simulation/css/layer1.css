@@ -1,0 +1,198 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#heading {
+    color: #288EC8;
+}
+#message {
+    background-color: rgb(164, 198, 82); 
+    color: white;
+    font-size:xx-large;
+}
+
+.buttons {
+    height: 3rem;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    margin: 0.4rem;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    text-transform: capitalize;
+    background-color: #288EC8;
+}
+
+#solprep {
+    position: relative;
+}
+
+#solprep > * {
+    position: absolute;
+}
+#solprep {
+    /* height: 30rem; */
+    width: 50%;
+    top: 1rem;
+    left: 2rem;
+}
+
+#sample {
+    height: 13rem;
+    width: 6rem;  
+    top: 0rem;
+    left: 0rem;
+}
+
+#solvent {
+    height: 13rem;
+    width: 6rem; 
+    top: 0rem;
+    left: 13rem;
+}
+
+#samplecollect {
+    position: relative;
+}
+#samplecollect > * {
+    position: absolute;
+}
+
+#samplecollect {
+    top: 15rem;
+    left: 5rem;
+}
+#emptybottle {
+    height: 13rem;
+    width: 6rem; 
+    top: 3rem;
+    left: 1.5rem;
+    opacity: 0.5;
+}
+#solution {
+    top: 15.0rem;
+    left: 1.6rem;
+    height: 0rem;
+    width: 5.7rem;
+    background-color: yellow;
+    opacity: 0;
+}
+
+#collectedsol1 {
+    position: relative;
+}
+#collectedsol1 > * {
+    position: absolute;
+}
+
+#dropper1 {
+    height: 10rem;
+    top: 0rem;
+    left: 3rem;
+    opacity: 0;
+}
+
+#sol1 {
+    top: 10.0rem;
+    left: 3.8rem;
+    height: 0rem;
+    width: 1.0rem;
+    background-color: yellow;
+    opacity: 0;
+}
+
+#collectedsol2 {
+    position: relative;
+}
+#collectedsol2 > * {
+    position: absolute;
+    /* top: 30rem; */
+}
+
+#dropper2 {
+    height: 10rem;
+    top: 26rem;
+    left: 9rem;
+    transform: rotate(125deg);
+    z-index: 1;
+    opacity: 0;  
+}
+
+#sol2 {
+    top: 28rem;
+    left: 9.5rem;
+    height: 5rem;
+    width: 1.0rem;
+    background-color: yellow;
+    opacity: 0;
+    z-index: 1;
+    transform: rotate(125deg);
+}
+
+#slideprep {
+    position: relative;
+}
+
+#slideprep > * {
+    position: absolute;
+}
+
+#slideprep {
+    top: 40rem;
+    left: 2rem;
+}
+
+#desiccator {
+    top: 0rem;
+    left: 0rem;
+}
+
+#jrcell {
+    height:15rem;
+    width: 10rem;
+    top: 20rem;
+    left: 0rem;
+    opacity: 0;
+}
+
+#slit {
+    height: 0rem;
+    width: 2.8rem;
+    top: 30.4rem;
+    left: 4.8rem;
+    opacity: 1;
+    background-color: yellow;
+    transform: skew(0deg,-25deg);
+    /* z-index: 1; */
+}
+
+@media screen and (min-width: 480px) and (max-width: 780px) {
+    #solprep {
+        left: 10rem;
+    }
+    #slideprep {
+        left: 10rem;
+    }
+}
+@media screen and (min-width: 780px) {
+    #slideprep {
+        display: inline;
+        top: 5rem;
+        left: 30rem;
+    }
+    #solprep {
+        left: 0rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #slideprep {
+        display: inline;
+        top: 0rem;
+        left: 40rem;
+    }
+    #solprep {
+        left: 5rem;
+    }
+}

@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
-
-	<!-- Add JS at the bottom of HTML file --> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/layer1.css">
+        <script src="https://unpkg.com/mathjs@9.2.0/lib/browser/math.js"></script>
+        <title>Mass Spectrography</title>
+    </head>
+    <body>
+        <h1 id="heading">Mass Spectrography</h1>
+        <p id="message">Select a Sample</p>
+        <div id="layer0">
+            <button onclick="sampleselect('1')" id="button1" class="buttons">2methyl-benzoic acid</button>
+            <button onclick="sampleselect('2')" id="button2" class="buttons">Caffeine</button>
+        </div>
+        <div id="layer1">
+            <div id="solprep">
+                <img onclick="addsample()" src="./images/sample.png" id="sample">
+                <img onclick="addsolvent()" src="./images/solvent.png" id="solvent">
+                    <div id="samplecollect">
+                        <div id="collectedsol1">
+                            <img src="./images/dropper.png" id="dropper1">
+                            <span id="sol1"></span>
+                        </div>
+                        <img onclick="filldropper1()" src="./images/emptybottle.png" id="emptybottle">
+                        <span onclick="filldropper1()" id="solution"></span>
+                    </div>
+            </div>
+            <div id="slideprep">
+                <div id="collectedsol2">
+                    <img src="./images/dropper.png" id="dropper2">
+                    <span id="sol2"></span>
+                </div>
+                <img onclick="addjrcell()" src="./images/desiccator.png" id="desiccator">
+                <img onclick="emptydropper2()" src="./images/jrcell.png" id="jrcell">
+                <!-- <img src="./images/slit.png" id="slit"> -->
+                <span id="slit"></span>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script src="./js/main.js"></script>
-</body>
+    </body>
 </html>
