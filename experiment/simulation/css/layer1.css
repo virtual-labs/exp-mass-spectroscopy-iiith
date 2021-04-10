@@ -67,15 +67,25 @@ body {
     height: 13rem;
     width: 6rem; 
     top: 3rem;
-    left: 1.5rem;
+    left: 0rem;
     opacity: 0.5;
 }
-#solution {
-    top: 15.0rem;
-    left: 1.6rem;
-    height: 0rem;
+
+#solution1 {
+    top: 13.4rem;
     width: 5.7rem;
-    background-color: yellow;
+    left: 0.1rem;
+    height: 2rem;
+    background-color: rgb(251, 255, 38);
+    opacity: 0;
+}
+
+#solution2 {
+    top: 9.4rem;
+    width: 5.7rem;
+    left: 0.1rem;
+    height: 4rem;
+    background-color: rgb(251, 255, 38);
     opacity: 0;
 }
 
@@ -89,14 +99,14 @@ body {
 #dropper1 {
     height: 10rem;
     top: 0rem;
-    left: 3rem;
+    left: 1.5rem;
     opacity: 0;
 }
 
 #sol1 {
-    top: 10.0rem;
-    left: 3.8rem;
-    height: 0rem;
+    top: 3.2rem;
+    left: 2.4rem;
+    height: 5rem;
     width: 1.0rem;
     background-color: yellow;
     opacity: 0;
@@ -144,6 +154,7 @@ body {
 }
 
 #desiccator {
+    height: 15rem;
     top: 0rem;
     left: 0rem;
 }
@@ -182,17 +193,75 @@ body {
         left: 30rem;
     }
     #solprep {
-        left: 0rem;
+        left: 2rem;
     }
 }
 
 @media screen and (min-width: 1200px) {
     #slideprep {
         display: inline;
-        top: 0rem;
+        top: 2rem;
         left: 40rem;
     }
     #solprep {
         left: 5rem;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+    #solprep {
+        left: 2rem;
+    }
+    #slideprep {
+        top: 25rem;
+        left: 0rem;
+    }
+    #samplecollect {
+        top: 10rem;
+    }
+    #sample {
+        height: 7.5rem;
+        width: 3rem;  
+    }
+    
+    #solvent {
+        height: 7.5rem;
+        width: 3rem; 
+        left: 7rem;
+    } 
+
+    #emptybottle {
+        height: 7.5rem;
+        width: 3rem; 
+        top: 3rem;
+        left: 0rem;
+    }
+    #solution1 {
+        top: 8.2rem;
+        left: 0.1rem;
+        height: 2rem;
+        width: 2.6rem;
+    }
+    #solution2 {
+        top: 6.2rem;
+        left: 0.1rem;
+        height: 4rem;
+        width: 2.6rem;
+    }    
+    #desiccator {
+        height: 10rem;
+        top: 0rem;
+        left: 0rem;
+    }
+    #dropper1 {
+        height: 5rem;
+        top: 1.3rem;
+        left: 0.8rem;
+    }
+    #sol1 {
+        top: 2.8rem;
+        left: 1.2rem;
+        height: 2.5rem;
+        width: 0.5rem;
     }
 }
