@@ -54,15 +54,15 @@ function addsample() {
     if(sample_selected != 5)
     {
         let a1 = anime.timeline({
-            targets: document.getElementById('solution'),
+            targets: document.getElementById('solution1'),
             duration: 1200,
             easing: 'linear',
         });
 
         a1.add({
             opacity: 1,
-            top: '13.4rem',
-            height: '2rem',
+            // top: '13.4rem',
+            // height: '2rem',
         }).add({
             update: function(anim) {
                 document.getElementById("message").innerHTML = messagearr[1];
@@ -78,15 +78,15 @@ function addsolvent() {
     if(sample_collect_flag)
     {
             let a1 = anime.timeline({
-            targets: document.getElementById('solution'),
+            targets: document.getElementById('solution2'),
             duration: 1200,
             easing: 'linear',
         });
 
         a1.add({
             opacity: 1,
-            top: '9.4rem',
-            height: '6.0rem',
+            // top: '9.4rem',
+            // height: '6.0rem',
         }).add({
             update: function(anim) {
                 document.getElementById("message").innerHTML = messagearr[2];
@@ -139,8 +139,8 @@ function filldropper1() {
         });
         a2.add({
             opacity: 1,
-            height: '5rem',
-            top: '3rem',
+            // height: '5rem',
+            // top: '3rem',
         });
         let a3 =anime.timeline({
             targets: document.getElementById('collectedsol1'),
@@ -152,9 +152,7 @@ function filldropper1() {
             opacity: 0,
         }).add({
             update: function(anim) {
-                document.getElementById("message").innerHTML = messagearr[4];
-                
-                
+                document.getElementById("message").innerHTML = messagearr[4];    
             }
         });
         fill_dropper_flag = 1;
@@ -208,9 +206,7 @@ function emptydropper2() {
             top: '27rem',
         }).add({
             update: function(anim) {
-                document.getElementById("message").innerHTML = messagearr[5];
-                
-                
+                document.getElementById("message").innerHTML = messagearr[5];   
             }
         });
         empty_dropper_flag = 1;
