@@ -1,0 +1,195 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#layer2 {
+    opacity: 0;
+}
+
+ 
+#ir-collect {
+   position: relative;
+   top: 16.2rem;
+   left: 16rem;
+}
+#ir-collect>* {
+    position: absolute;
+}
+
+
+#ir-plate2 {
+    top: 2em;
+    left: 1em;
+    height: 8em;
+    width: 8em;
+    z-index: 7;
+}
+
+#red-circle1 {
+    top: 4em;
+    left: 3.5em;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 8;
+}
+
+#red-circle2 {
+    top: 5.2em;
+    left: 6.5em;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    z-index: 8;
+    background-color: red;
+    opacity: 0;
+}
+
+#ir-plate4 {
+    top: -1em;
+    left: 1em;
+    height: 8em;
+    width: 8em;
+    opacity: 0;
+    z-index: 7;
+}
+
+#ir-plate5 {
+    top: 3.5em;
+    left: 4em;
+    height: 8em;
+    width: 8em;
+    opacity: 0;
+    z-index: 7;
+}
+
+#ir-plate3 {
+    top: 2em;
+    left: 18em;
+    height: 8em;
+    width: 8em;
+    z-index: 7;
+}
+
+#plate-collect {
+    position: relative;
+}
+
+#plate-collect>* {
+    position: absolute;
+}
+
+#plate-collect {
+    left: 13.8rem;
+    top: 0rem;
+}
+
+#plate1 {
+    top: 1em;
+    left: 2em;
+    height: 13em;
+    width: 13em;
+    z-index: 6;
+}
+
+#plate2 {
+    left: 10em;
+    top: 1em;
+    height: 13em;
+    width: 13em;
+    z-index: 8;
+    opacity: 0;
+}
+
+@media screen and (max-width: 800px) {
+    #ir-plate2 {
+        left: -10em;
+        height: 7em;
+        width: 7em;
+    }
+    #ir-plate4 {
+        left: -10em;
+        height: 7em;
+        width: 7em;
+    }
+    #red-circle1 {
+        top: 3.3em;
+        left: -7.9em;
+        height: 3em;
+        width: 3em;
+        border-radius: 50%;
+    }
+    #ir-plate3 {
+        height: 7em;
+        width: 7em;
+        left: 5em;
+    }
+    #plate1 {
+        left: -9em;
+    }
+    #plate2 {
+        left: -1em;
+    }
+    #red-circle2 {
+        left: -4.4em;
+    }
+    #ir-plate5 {
+        left: -6.8em;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #ir-collect {
+        top: 11em;
+    }
+    #plate1 {
+        width: 8rem;
+        left: -13em;
+        height: 8em;
+    }
+    #plate2 {
+        width: 8em;
+        height: 8em;
+        left: -5em;
+    }
+    #ir-plate2 {
+        left: -14em;
+        height: 5em;
+        width: 5em;
+    }
+    #red-circle1 {
+        top: 3.3em;
+        left: -12.4em;
+        height: 1.8em;
+        width: 1.8em;
+        border-radius: 50%;
+    }
+    #red-circle2 {
+        top: 3.7em;
+        left: -10.2em;
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
+    }
+    #ir-plate5 {
+        top: 2.5em;
+        left: -11.7em;
+        height: 5em;
+        width: 5em;
+    }
+    #ir-plate4 {
+        left: -14em;
+        height: 5em;
+        width: 5em;
+    }
+    #ir-plate3 {
+        left: -7.8em;
+        height: 5em;
+        width: 5em;
+    }
+    #plate-collect {
+        top: 2em;
+    }
+}

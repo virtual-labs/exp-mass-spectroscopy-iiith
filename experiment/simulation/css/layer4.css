@@ -1,0 +1,613 @@
+#layer4 {
+    opacity: 0;
+}
+
+#line1 {
+    position: absolute;
+    top: 32.2rem;
+    height: 0.5rem;
+    width: 10rem;
+    left: 10.6rem;
+    background-color: rgb(231, 231, 125);
+    opacity: 0;
+    z-index: 2;
+}
+
+#line2 {
+    position: absolute;
+    top: 32.2rem;
+    height: 0.5rem;
+    width: 14.3rem;
+    left: 20.6rem;
+    background-color: rgb(231, 231, 125);
+    opacity: 0;
+    z-index: 2;
+}
+
+#fixedmirrorheading {
+    position: absolute;
+    font-size: 2.5rem;
+    left: 46.5rem;
+    top: 5.4rem;
+}
+
+#irheading {
+    position: absolute;
+    font-size: 2.5rem;
+    left: 2.5rem;
+    top: 23.4rem;
+}
+
+#moveablemirrorheading {
+    position: absolute;
+    font-size: 2.5rem;
+    left: 56.8rem;
+    top: 20.3rem;
+}
+
+#beamsplitterheading {
+    position: absolute;
+    font-size: 2.5rem;
+    left: 21.7rem;
+    top: 34.3rem;
+}
+
+#detectorheading {
+    position: absolute;
+    font-size: 2.5rem;
+    left: 42.7rem;
+    top: 54.3rem;
+    width: 5rem;
+}
+
+#lineup1 {
+    position: absolute;
+    top: 15.7rem;
+    height: 11.8rem;
+    width: 0.5rem;
+    left: 36rem;
+    background-color: rgb(231, 231, 125);
+    opacity: 0;
+    z-index: 2;
+}
+
+#lineup2 {
+    position: absolute;
+    top: 8.7rem;
+    height: 7.5rem;
+    width: 0.5rem;
+    left: 36rem;
+    background-color: rgb(231, 231, 125)/*red*/
+    ;
+    opacity: 0;
+    z-index: 2;
+}
+
+#lineright1 {
+    position: absolute;
+    top: 32.2rem;
+    height: 0.5rem;
+    width: 15rem;
+    left: 38.6rem;
+    background-color: rgb(231, 231, 125);
+    opacity: 0;
+    z-index: 2;
+}
+
+#lineright2 {
+    position: absolute;
+    top: 32.2rem;
+    height: 0.5rem;
+    width: 10.4rem;
+    left: 53.6rem;
+    background-color: rgb(231, 231, 125);
+    opacity: 0;
+    z-index: 2;
+}
+
+#linedown1 {
+    position: absolute;
+    top: 37.3rem;
+    height: 8rem;
+    width: 0.5rem;
+    left: 37rem;
+    background-color: rgb(231, 231, 125);
+    opacity: 0;
+    z-index: 2;
+}
+
+#linedown2 {
+    position: absolute;
+    top: 45.3rem;
+    height: 7.7rem;
+    width: 0.5rem;
+    left: 37rem;
+    background-color: rgb(231, 231, 125);
+    opacity: 0;
+    z-index: 2;
+}
+
+#fixedmirror {
+    position: absolute;
+    top: 5rem;
+    height: 3.7rem;
+    width: 16rem;
+    left: 29rem;
+    opacity: 1;
+    z-index: 2;
+}
+
+#beamsplitter {
+    position: absolute;
+    top: 25rem;
+    height: 13rem;
+    width: 8rem;
+    left: 32.5rem;
+    opacity: 1;
+    z-index: 2;
+}
+
+#ir {
+    position: absolute;
+    top: 28.4rem;
+    height: 8rem;
+    width: 8rem;
+    left: 2.9rem;
+    opacity: 1;
+    z-index: 2;
+}
+
+#mirror1 {
+    position: absolute;
+    top: 23.9rem;
+    height: 13.5rem;
+    width: 15.5rem;
+    left: 57.5rem;
+    opacity: 1;
+    z-index: 2;
+}
+
+#detector {
+    position: absolute;
+    top: 53rem;
+    height: 12rem;
+    width: 8rem;
+    left: 33.8rem;
+    opacity: 1;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1315px) {
+    #fixedmirrorheading {
+        font-size: 2.5rem;
+        left: 35rem;
+        top: 5.4rem;
+    }
+    #irheading {
+        font-size: 2.5rem;
+        left: 1.7rem;
+        top: 21rem;
+    }
+    #moveablemirrorheading {
+        font-size: 2.5rem;
+        left: 40.8rem;
+        top: 15.3rem;
+    }
+    #beamsplitterheading {
+        font-size: 2.5rem;
+        width: 5rem;
+        left: 14rem;
+        top: 29.3rem;
+    }
+    #detectorheading {
+        font-size: 2.5rem;
+        left: 34.2rem;
+        top: 46.3rem;
+        width: 5rem;
+    }
+    #line1 {
+        top: 27.3rem;
+        height: 0.5rem;
+        width: 7.4rem;
+        left: 7.6rem;
+    }
+    #line2 {
+        top: 27.3rem;
+        height: 0.5rem;
+        width: 9.3rem;
+        left: 15rem;
+    }
+    #lineup1 {
+        top: 15.7rem;
+        height: 7.7rem;
+        width: 0.5rem;
+        left: 25.5rem;
+    }
+    #lineup2 {
+        top: 8.7rem;
+        height: 7rem;
+        width: 0.5rem;
+        left: 25.5rem;
+    }
+    #lineright1 {
+        top: 27.7rem;
+        height: 0.5rem;
+        width: 8rem;
+        left: 28rem;
+    }
+    #lineright2 {
+        top: 27.7rem;
+        height: 0.5rem;
+        width: 10rem;
+        left: 35.8rem;
+    }
+    #linedown1 {
+        top: 31.7rem;
+        height: 5.5rem;
+        width: 0.5rem;
+        left: 26.4rem;
+    }
+    #linedown2 {
+        top: 37rem;
+        height: 7.03rem;
+        width: 0.5rem;
+        left: 26.4rem;
+    }
+    #fixedmirror {
+        top: 5rem;
+        height: 3.7rem;
+        width: 16rem;
+        left: 18rem;
+    }
+    #beamsplitter {
+        top: 22rem;
+        height: 11rem;
+        width: 8em;
+        left: 22.4rem;
+    }
+    #ir {
+        top: 24.5rem;
+        height: 6.2rem;
+        width: 6.2rem;
+        left: 1.5rem;
+    }
+    #mirror1 {
+        top: 19rem;
+        height: 13.5rem;
+        width: 12.5rem;
+        left: 40.7rem;
+    }
+    #detector {
+        top: 44rem;
+        height: 10rem;
+        width: 8rem;
+        left: 23.7rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #fixedmirrorheading {
+        font-size: 1.6rem;
+        left: 27.7rem;
+        top: 5.7rem;
+    }
+    #irheading {
+        font-size: 1.6rem;
+        left: 1.5rem;
+        top: 21rem;
+    }
+    #moveablemirrorheading {
+        font-size: 1.6rem;
+        left: 35.8rem;
+        top: 16.2rem;
+    }
+    #beamsplitterheading {
+        font-size: 1.6rem;
+        width: 2rem;
+        left: 12.7rem;
+        top: 27rem;
+    }
+    #detectorheading {
+        font-size: 1.6rem;
+        left: 25.7rem;
+        top: 43.3rem;
+        width: 5rem;
+    }
+    #line1 {
+        top: 24.9rem;
+        height: 0.5rem;
+        width: 7.4rem;
+        left: 7rem;
+    }
+    #line2 {
+        top: 24.9rem;
+        height: 0.5rem;
+        width: 7.5rem;
+        left: 13rem;
+    }
+    #lineup1 {
+        top: 13.9rem;
+        height: 6.2rem;
+        width: 0.5rem;
+        left: 20.5rem;
+    }
+    #lineup2 {
+        top: 8rem;
+        height: 6rem;
+        width: 0.5rem;
+        left: 20.5rem;
+    }
+    #lineright1 {
+        top: 24.9rem;
+        height: 0.5rem;
+        width: 8rem;
+        left: 23.3rem;
+    }
+    #lineright2 {
+        top: 24.9rem;
+        height: 0.5rem;
+        width: 9rem;
+        left: 30.8rem;
+    }
+    #linedown1 {
+        top: 27.5rem;
+        height: 6.3rem;
+        width: 0.5rem;
+        left: 21.4rem;
+    }
+    #linedown2 {
+        top: 33.7rem;
+        height: 7rem;
+        width: 0.5rem;
+        left: 21.4rem;
+    }
+    #fixedmirror {
+        top: 5rem;
+        height: 3rem;
+        width: 13rem;
+        left: 14.5rem;
+    }
+    #beamsplitter {
+        top: 20rem;
+        height: 10rem;
+        width: 8rem;
+        left: 18.4rem;
+    }
+    #ir {
+        top: 22.7rem;
+        height: 5rem;
+        width: 5rem;
+        left: 2.1rem;
+    }
+    #mirror1 {
+        top: 18.6rem;
+        height: 11.5rem;
+        width: 12.5rem;
+        left: 34.5rem;
+    }
+    #detector {
+        top: 40.8rem;
+        height: 8rem;
+        width: 6rem;
+        left: 19rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #fixedmirrorheading {
+        font-size: 1.5rem;
+        left: 8.8rem;
+        top: 7.4rem;
+    }
+    #irheading {
+        font-size: 1.5rem;
+        left: 1.5rem;
+        top: 21rem;
+    }
+    #moveablemirrorheading {
+        font-size: 1.5rem;
+        left: 16.8rem;
+        top: 17.8rem;
+    }
+    #beamsplitterheading {
+        font-size: 1.5rem;
+        width: 2rem;
+        left: 7rem;
+        top: 26rem;
+    }
+    #detectorheading {
+        font-size: 1.5rem;
+        left: 15.7rem;
+        top: 35.3rem;
+        width: 5rem;
+    }
+    #line1 {
+        top: 24.5rem;
+        height: 0.3rem;
+        width: 4.1rem;
+        left: 4.8rem;
+    }
+    #line2 {
+        top: 24.5rem;
+        height: 0.3rem;
+        width: 3.4rem;
+        left: 8.7rem;
+    }
+    #lineup1 {
+        top: 16.3rem;
+        height: 4.7rem;
+        width: 0.3rem;
+        left: 12.5rem;
+    }
+    #lineup2 {
+        top: 11.5rem;
+        height: 4.8rem;
+        width: 0.3rem;
+        left: 12.5rem;
+    }
+    #lineright1 {
+        top: 24.5rem;
+        height: 0.3rem;
+        width: 3rem;
+        left: 14.7rem;
+    }
+    #lineright2 {
+        top: 24.5rem;
+        height: 0.3rem;
+        width: 4.8rem;
+        left: 15.8rem;
+    }
+    #linedown1 {
+        top: 25.5rem;
+        height: 4.6rem;
+        width: 0.3rem;
+        left: 12.4rem;
+    }
+    #linedown2 {
+        top: 30.1rem;
+        height: 4.5rem;
+        width: 0.3rem;
+        left: 12.4rem;
+    }
+    #fixedmirror {
+        top: 9.5rem;
+        height: 2rem;
+        width: 9rem;
+        left: 8.5rem;
+    }
+    #beamsplitter {
+        top: 20.8rem;
+        height: 8rem;
+        width: 7rem;
+        left: 10.3rem;
+    }
+    #ir {
+        top: 23rem;
+        height: 3.2rem;
+        width: 3.2rem;
+        left: 1.8rem;
+    }
+    #mirror1 {
+        top: 20rem;
+        height: 8em;
+        width: 8rem;
+        left: 17.5rem;
+    }
+    #detector {
+        top: 35rem;
+        height: 6rem;
+        width: 5rem;
+        left: 10.3rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #fixedmirrorheading {
+        font-size: 1.4rem;
+        left: 4.5rem;
+        top: 10.5rem;
+        width: 4rem;
+    }
+    #irheading {
+        font-size: 1.4rem;
+        width: 4rem;
+        left: 1.1rem;
+        top: 26rem;
+    }
+    #moveablemirrorheading {
+        font-size: 1.4rem;
+        left: 8.8rem;
+        top: 18.8rem;
+        width: 3rem;
+    }
+    #beamsplitterheading {
+        font-size: 1.4rem;
+        width: 2rem;
+        left: 9rem;
+        top: 27rem;
+    }
+    #detectorheading {
+        font-size: 1.4rem;
+        left: 5rem;
+        top: 37.8rem;
+        width: 5rem;
+    }
+    #line1 {
+        top: 24.5rem;
+        height: 0.3rem;
+        width: 1.8rem;
+        left: 2.6rem;
+    }
+    #line2 {
+        top: 24.5rem;
+        height: 0.3rem;
+        width: 2rem;
+        left: 4.4rem;
+    }
+    #lineup1 {
+        top: 18.2rem;
+        height: 3.9rem;
+        width: 0.3rem;
+        left: 6.1rem;
+    }
+    #lineup2 {
+        top: 15.5rem;
+        height: 2.8rem;
+        width: 0.3rem;
+        left: 6.1rem;
+    }
+    #lineright1 {
+        top: 24.5rem;
+        height: 0.3rem;
+        width: 1.6rem;
+        left: 7.7rem;
+    }
+    #lineright2 {
+        top: 24.5rem;
+        height: 0.3rem;
+        width: 1.3rem;
+        left: 9.3rem;
+    }
+    #linedown1 {
+        top: 25rem;
+        height: 4.6rem;
+        width: 0.3rem;
+        left: 6.4rem;
+    }
+    #linedown2 {
+        top: 28.1rem;
+        height: 3.4rem;
+        width: 0.3rem;
+        left: 6.4rem;
+    }
+    #fixedmirror {
+        top: 13.5rem;
+        height: 2rem;
+        width: 7rem;
+        left: 3.1rem;
+    }
+    #beamsplitter {
+        top: 22rem;
+        height: 5rem;
+        width: 3rem;
+        left: 5.5rem;
+    }
+    #ir {
+        top: 23.7rem;
+        height: 1.8rem;
+        width: 1.8rem;
+        left: 0.9rem;
+    }
+    #mirror1 {
+        top: 21.9rem;
+        height: 5rem;
+        width: 4rem;
+        left: 9rem;
+    }
+    #detector {
+        top: 31.5rem;
+        height: 6rem;
+        width: 2.7rem;
+        left: 5.5rem;
+    }
+}

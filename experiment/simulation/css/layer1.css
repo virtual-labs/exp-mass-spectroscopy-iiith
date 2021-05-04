@@ -3,27 +3,17 @@ body {
     width: 100%;
 }
 
-#heading {
-    color: #288EC8;
+#layer1 {
+    position: relative;
+    z-index: 20;
 }
-#message {
-    background-color: rgb(164, 198, 82); 
-    color: white;
-    font-size:xx-large;
+#layer1 > * {
+    position: absolute;
 }
-
-.buttons {
-    height: 3rem;
-    border-radius: 0.5rem;
-    padding: 0.4rem;
-    margin: 0.4rem;
-    color: white;
-    font-weight: 600;
-    font-size: large;
-    text-transform: capitalize;
-    background-color: #288EC8;
+#layer1 {
+    opacity: 0;
+    top: 2rem;
 }
-
 #solprep {
     position: relative;
 }
@@ -168,11 +158,11 @@ body {
 }
 
 #slit {
-    height: 0rem;
+    height: 3.4rem;
     width: 2.8rem;
-    top: 30.4rem;
+    top: 27rem;
     left: 4.8rem;
-    opacity: 1;
+    opacity: 0;
     background-color: yellow;
     transform: skew(0deg,-25deg);
     /* z-index: 1; */
@@ -253,6 +243,12 @@ body {
         top: 0rem;
         left: 0rem;
     }
+    #jrcell {
+        height:7.5rem;
+        width: 5rem;
+        top: 15rem;
+        left: 2rem;
+    }
     #dropper1 {
         height: 5rem;
         top: 1.3rem;
@@ -262,6 +258,23 @@ body {
         top: 2.8rem;
         left: 1.2rem;
         height: 2.5rem;
+        width: 0.5rem;
+    }
+    #dropper2 {
+        height: 5rem;
+        top: 19rem;
+        left: 6rem; 
+    }
+    #slit {
+        height: 1.5rem;
+        width: 1.5rem;
+        top: 18.5rem;
+        left: 4.5rem;
+    }
+    #sol2 {
+        top: 20rem;
+        left: 6.25rem;
+        height: 2.7rem;
         width: 0.5rem;
     }
 }
