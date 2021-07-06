@@ -73,6 +73,7 @@ async function moveSyringe() {
     let endY = "-248%";
 
     screenWidth();
+    console.log("DivWidth: ", divWidth);
 
     if (divWidth > 1759) {
       startX = "-950%";
