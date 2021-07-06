@@ -1,0 +1,31 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#message {
+  font-size: xx-large;
+  /* position: absolute;
+  top: 0.2rem; */
+  border-style: solid;
+  border-color: rgb(151, 210, 61);
+  border-radius: 1rem;
+  color: #288ec8;
+  width: 90%;
+}
+
+.buttons {
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  margin: 0.4rem;
+  color: white;
+  font-weight: 600;
+  font-size: large;
+  text-transform: capitalize;
+  background-color: #288ec8;
+}
+
+#layer0 {
+  z-index: 10;
+}
