@@ -1,21 +1,8 @@
-Follow the procedure given below:
+### Procedure
 
-Step1: Click on 'Load Sample'
+Follow the procedure given below once all the apparatus has been introduced into the workspace:
 
-Observe: The sample is introduced into the vaporisation chamber which is instantly vapourised due to high vacuum and heat.
-
-Step 2: Click on 'Ionisation'
-
-Observe: Positively charged radical ions are formed by bombardment of beam of high energy electrons.
-
-Step 3:Click on 'Accelaration'
-
-Observe: The positively charged radical ions are accelerated by perforated negative electrodes.
-
-Step 4: Click on 'Deflection'
-
-Observe: The ions are sorted and separted by the magnetic field according to their mass/ charge ratio.
-
-Step 5:Click on 'Evaluation'
-
-oObserve:Takes one to a new page where one needs to analyse the mass spectrum.
+1. Click on the Sample Beaker to draw 1 ml of the sample (methanol or aspirin) and load it onto the spectrometer inlet of the Mass Spectrometer.
+2. Click on the Observe button in the Control Menu to observe what is happening inside the Mass Spectrometer.
+3. Click on the Observe button again to observe the Intensity graph plotted.
+4. Click on the Restart button in the Control Menu to repeat the experiment from scratch.

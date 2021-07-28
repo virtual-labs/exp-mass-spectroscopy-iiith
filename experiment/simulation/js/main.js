@@ -3,6 +3,7 @@ let overallIteration = -1;
 let divWidth = 0;
 let videoSpeed = 1;
 let speedFactor = 1.0;
+let blue = "#00a8f3";
 
 let startAnimation = async () => {
   const line = document.getElementById("half-grad");
@@ -20,7 +21,7 @@ let startAnimation = async () => {
 
 let fillSyringe = async (x) => {
   if (x === 1 && overallIteration === 1) {
-    document.getElementById("line3").style.stopColor = "#00a8f3";
+    document.getElementById("line3").style.stopColor = blue;
   }
   const line = document.getElementById("half-grad3");
   const yFinalPosition = 0;
@@ -140,7 +141,7 @@ async function visibility(x) {
 }
 
 let instructionMessages = [
-  "Click on the Sample Beaker to draw 1 ml of the sample (methanol or aspirin) and load it onto the spectrometer inlet of the mass spectrometer.",
+  "Click on the Sample Beaker to draw 1 ml of the sample (methanol or aspirin) and load it onto the spectrometer inlet of the Mass Spectrometer.",
 ];
 let iter1 = -1;
 function changeMessage() {
