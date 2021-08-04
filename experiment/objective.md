@@ -1,1 +1,1 @@
-Introduction to mass spectrometry instrumentation and interpretation of mass spectra.
+Introduction to Mass Spectrometry Instrumentation and interpretation of Mass Spectra.
