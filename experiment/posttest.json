@@ -2,72 +2,89 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Which of the following statement is false for mass spectroscopy?",
+      "question": "1. In a mass spectrometer, the sample that has to be analysed is bombarded with which of the following?",
       "answers": {
-        "a": "Mass spectroscopy is used to identify unknown compounds within a sample, and to elucidate the structure and chemical properties of different molecules",
-        "b": "Particles are characterized by their mass to charge ratios (m/z) and relative abundances",
-        "c": "This technique basically studies the effect of ionizing energy on molecules",
-        "d": "This technique can be used on all states of matter"
+        "a": "Protons",
+        "b": "Electrons",
+        "c": "Neutrons",
+        "d": "Alpha particles"
       },
       "explanations": {
-        "a": "Mass spectroscopy like other techniques helps in identifying unknown compounds.",
-        "b": "Mass to Charge ratio is a key component to identify any molecule.",
-        "c": "By ionising the molecule and the consequent behaviour of the molecule, it studies the effect that ionizing energy has on the molecule.",
-        "d": "This theory studies the effect of ionization on the molecule when accelerated through vacuum, for this purpose only the gaseous state of molecules can be studied."
+        "a": "",
+        "b": "In a mass spectrometer, the sample which is to be analysed is bombarded with electrons. This causes some of the sample's molecules to break up into positively charged fragments or simply become positively charged without fragmenting.",
+        "c": "",
+        "d": ""
       },
       "difficulty": "beginner",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "2. Which of the following statements is not true about mass spectrometry?",
+      "answers": {
+        "a": "Impurities of masses different from the one being analysed interferes with the result",
+        "b": "It has great sensitivity",
+        "c": "It is suitable for data storage",
+        "d": "It is suitable for library retrieval"
+      },
+      "explanations": {
+        "a": "Impurities of masses different from the one being analysed do not interfere with the result in mass spectroscopy. This is a major advantage of this technique.",
+        "b": "Sensitivity of any spectrophotometric technique depends on the spectrophotometer and not on the working principle of it. Infact, impurities do not interfere with the sample analysed.",
+        "c": "Data storage is not correlated with the type of spectrometry used.",
+        "d": "Library retrieval is irrespective of  the type of spectrometry used."
+      },
+      "difficulty": "beginner",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "3. Decide whether a statement about resolution (R) is true or not.",
+      "answers": {
+        "a": "The higher the mass spectrometric resolution, the worse the distinction between two only slightly differing m/z.",
+        "b": "Assuming a resolution of 1000, you can distinguish between m/z 10.00 and m/z 10.01.",
+        "c": "Assuming a resolution of 1000, you can distinguish between m/z 1000.00 and m/z 1000.01.",
+        "d": "The higher the mass spectrometric resolution, the better the distinction between two only slightly differing m/z."
+      },
+      "explanations": {
+        "a": "Higher resolutions means the distinction between two slightly differing peaks should be better.",
+        "b": "A resolution of 1000 would mean distinction between two peaks with a difference of 0.001.",
+        "c": "A resolution of 1000 would mean distinction between two peaks with a difference of 0.001.",
+        "d": "Higher resolutions means the distinction between two slightly differing peaks should be better."
+      },
+      "difficulty": "intermediate",
       "correctAnswer": "d"
     },
     {
-      "question": "2. Which of the following main components of mass spectroscopy deal with resolving the ions into their characteristic mass components according to their mass-to-charge ratio?",
+      "question": "4. What do the heights of the peaks represent in the mass spectrum?",
       "answers": {
-        "a": "Ion Source",
-        "b": "Analyzer",
-        "c": "Detector System",
-        "d": "Analyzer tube"
+        "a": "number of ions",
+        "b": "relative abundance of each ion",
+        "c": "average atomic mass",
+        "d": "charge:mass ratio"
       },
       "explanations": {
-        "a": "In a mass spectrometer a sample is ionized in an ion source and the resulting ions are separated by their mass-to-charge ratio.",
-        "b": "The complete process involves the conversion of the sample into gaseous ions, with or without fragmentation, which is then characterized by their mass to charge ratios (m/z) by an analyser. Eventually, the second analyzer will analyse fragment the selected ions and detect the ions emerging from the last analyzer and measure their relative abundances with the detector that converts the ions into electrical signals.",
-        "c": "The ions are detected by the detector system and the results are displayed as spectra of the relative abundance of detected ions as a function of the mass-to-charge ratio.",
-        "d": "Analyzer tube is a flight tube which is used to measure TOF (time of flight) through it in a type of analyzer known as TOF mass analyser."
+        "a": "the peak of any m/z ratio is not indicative of the number of ions detected by the detector.",
+        "b": "peak is indicative of the relative abundance of any ion with respect to all other peaks.",
+        "c": "average atomic mass of any fragment of molecule cannot be determined from the peak height.",
+        "d": "mass/charge ratio is the range of x axis and height of peak does not relate to it."
       },
       "difficulty": "intermediate",
       "correctAnswer": "b"
     },
     {
-      "question": "3. In mass spectrometer, the ions are sorted out in which of the following ways?",
+      "question": "5. Which of the following formulae is consistent with a molecular ion of m/z 73 in a mass spectrometry experiment?",
       "answers": {
-        "a": "By accelerating them through electric field",
-        "b": "By accelerating them through magnetic field",
-        "c": "By accelerating them through electric and magnetic field",
-        "d": "By applying a high voltage"
+        "a": "C<sub>3</sub>H<sub>8</sub>N<sub>2</sub>",
+        "b": "C<sub>4</sub>H<sub>11</sub>N",
+        "c": "C<sub>4</sub>H<sub>10</sub>O",
+        "d": "C<sub>3</sub>H<sub>5</sub>NO"
       },
       "explanations": {
-        "a": "",
-        "b": "",
-        "c": "In a mass spectrometer, the ions are sorted out by accelerating them through electric and magnetic fields. A record of the number of different kinds of ions is called the mass spectrum. ",
-        "d": ""
-      },
-      "difficulty": "intermediate",
-      "correctAnswer": "c"
-    },
-    {
-      "question": "4. Which species would get deflected by the greatest degree in the mass spectrometer?",
-      "answers": {
-        "a": "<sup>12</sup>C<sup>+</sup>",
-        "b": "<sup>13</sup>C<sup>+</sup>",
-        "c": "<sup>13</sup>C<sup>2+</sup>",
-        "d": "<sup>14</sup>C<sup>+</sup>"
-      },
-      "explanations": {
-        "a": "Higher the m/z ratio, more is the deflection. For <sup>12</sup>C<sup>+</sup> is 12.",
-        "b": "m/z ratio is 13",
-        "c": "m/z ratio is 6.5",
-        "d": "m/z ratio is 14. Hence due to the highest m/z ratio, this ion would be deflected the most"
+        "a": "m/z ratio for this molecular ion is 72.",
+        "b": "m/z ratio  for this molecular ion is 73.",
+        "c": "m/z ratio  for this molecular ion is 74.",
+        "d": "m/z ratio  for this molecular ion is 71."
       },
       "difficulty": "advanced",
-      "correctAnswer": "d"
+      "correctAnswer": "b"
     }
   ]
 }
