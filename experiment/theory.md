@@ -1,15 +1,15 @@
 The magnetic sector mass analysis: The kinetic energy of an accelerated ion imparted by the voltage V is:
 
-           [image1](images/eq11.png)
+<image src="./images/eq11.png">
 
 Where m is the mass of the ion, v is its velocity, and z is the charge. When the ions pass through the two poles of a magnet, the charged particles take a curve path. The radius of curvature (r) of this path is:
 
-         [image2](images/eq21.png)
+<image src="./images/eq21.png">
 
 Where B is the magnetic field strength.
 Combining the above two equations:
 
-          [image3](images/eq31.png)
+<image src="./images/eq31.png">
 
 Greater the value of m/z value larger is the radius of the curved path. The analyzer tube has a fixed radius of curvature, and the magnetic field strength is varied such that all the ions reach the detector.
 
@@ -25,22 +25,11 @@ d. Detector: The ions that are deflected under the magnetic field are detected b
 
 e. Output: The signal is then recorded and processed by the data system. The output is the mass spectrum.
 
-[image4](images/figure2_intro_exp8.jpg)
+<image src="./images/figure2_intro_exp8.jpg">
 
 Picture source:
 
-[http://web.mit.edu/12.000/www/finalpresentation/experiments/gcms.html](http://web.mit.edu/12.000/www/finalpresentation/experiments/gcms.html)
-
-Ionization methods and the source of ionization:
-Ionisation source Ionisation method
-Electrospray Ionisation (ESI) Evaporation of charged droplets
-Nano Electrospray Ionisation (nanoESI) Evaporation of charged droplets
-Chemical Ionisation (CI) Proton transfer
-Atmospheric Pressure Chemical Ionisation (APCI) Corona discharge and proton transfer
-Matrix Assisted Laser D[http://web.mit.edu/12.000/www/finalpresentation/experiments/gcms.html[http://web.mit.edu/12.000/www/finalpresentation/experiments/gcms.html[http://web.mit.edu/12.000/www/finalpresentation/experiments/gcms.html[http://web.mit.edu/12.000/www/finalpresentation/experiments/gcms.htmlesorption/Ionisation (MALDI) Proton absorption/ proton transfer
-Desorption/Ionisation On Silicon (DIOS) Proton absorption/ proton transfer
-Fast Atom/Ion Bombardment (FAB) Ion desorption/ proton transfer
-Electron Ionisation (EI) Electron beam/ electron transfer
+[Spectroscopic Analysis](https://web.mit.edu/12.000/www/finalpresentation/experiments/gcms.html)
 
 **Electron Ionisation method:**
 
