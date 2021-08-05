@@ -205,8 +205,10 @@ async function restart() {
   document.getElementById("sample-beaker").style.cursor = "pointer";
 }
 
+let observeClick = false;
 async function observe() {
-  if (overallIteration === 3) {
+  if (overallIteration === 3 && !observeClick) {
+    observeClick = true;
     document.getElementById("slidecontainer").style.display = "block";
     document.getElementById("apparatus-bottles").style.display = "none";
     document.getElementById("apparatus-spectrometer").style.display = "none";
@@ -234,7 +236,8 @@ async function observe() {
       document.getElementById("observation").innerHTML =
         "Click on Observe option in the Control Menu again to see the graph.";
     }
-  } else if (overallIteration === 4) {
+    observeClick = false;
+  } else if (overallIteration === 4 && !observeClick) {
     observeMessage();
 
     document.getElementById("slidecontainer").style.display = "none";
