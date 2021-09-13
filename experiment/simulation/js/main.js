@@ -1,231 +1,308 @@
 "use strict";
-const messagearr = [
-    "Click on the sample to transfer the small amount(2-5mg) of the sampe into the empty sample bottle",
-    "Click on the solvent bottle to transfer 2 to 3 ml of the solvent(methylene chloride) to the sample to prepare a clear solution",
-    "Click on the dessicator to take out the 'solution JR cell",
-    "Click on the sample solution to draw 1ml of the solution with a syringe",
-    "Click on the JR cell to transfer the sample solution until all the air is expelled from the solution cell",
-    "Click on the solution JR cell to place the cell inside the spectrometer ",
-    "Click the JR discs to move the JR plates to the plate holder",
-    "Click on the holder to place the sample in the spectrometer..",
-    "Click start to run the spectrometer"
-]
-// flags
-let sample_selected = -1
-let sample_collect_flag = 0
-let solvent_collect_flag = 0
-let desiccator_flag = 0
-let fill_dropper_flag = 0
-let empty_dropper_flag = 0
-let prepration_stage_flag = 0
+let overallIteration = -1;
+let divWidth = 0;
+let videoSpeed = 1;
+let speedFactor = 1.0;
+let blue = "#00a8f3";
 
-function sampleselect(c) {
-    // const c = event.target.id;
-    const a1 = anime.timeline({
-        targets: document.getElementById('button1'),
-        duration: 200,
-        easing: 'linear',
-    });
-    const a2 = anime.timeline({
-        targets: document.getElementById('button2'),
-        duration: 200,
-        easing: 'linear',
-    });
-    if(c=='1')
-    {
-        sample_selected = 1;
+const apparatusOptions = ["sample", "mass-spectrometer", "observe"];
+
+apparatusOptions.forEach(function (option) {
+  document.getElementById(option).style.pointerEvents = "none";
+});
+
+document.getElementById("sample").style.pointerEvents = "auto";
+
+let startAnimation = async () => {
+  const line = document.getElementById("half-grad");
+  const yFinalPosition = 0;
+  let yPos = 100;
+  const interval = window.setInterval(() => {
+    if (yPos < yFinalPosition) {
+      line.setAttribute("y1", "0.1%");
+      return window.clearInterval(interval);
     }
-    else if(c=='2')
-    {
-        sample_selected = 2;
+    yPos -= 0.1;
+    line.setAttribute("y1", `${yPos}%`);
+  }, 1);
+};
+
+let fillSyringe = async (x) => {
+  if (x === 1 && overallIteration === 1) {
+    document.getElementById("line3").style.stopColor = blue;
+  }
+  const line = document.getElementById("half-grad3");
+  const yFinalPosition = 0;
+  let yPos = 100;
+  const interval = window.setInterval(() => {
+    if (yPos < yFinalPosition) {
+      line.setAttribute("y1", "0.1%");
+      return window.clearInterval(interval);
     }
+    yPos -= 0.6;
+    line.setAttribute("y1", `${yPos}%`);
+  }, 1);
+  overallIteration++;
+
+  document.getElementById("sample-beaker").style.cursor = "default";
+};
+
+async function liftPiston() {
+  let image = document.getElementById("syringe-piston");
+  image.style.transform = "translate(100%, -5%);";
+  image.style.pointerEvents = "none";
+  let a1 = anime.timeline({
+    targets: "#syringe-piston",
+    duration: 800,
+    easing: "linear",
+  });
+  a1.add({
+    duration: 0,
+    translateY: "8%",
+  }).add({
+    duration: 800,
+    translateY: "-3%",
+  });
+}
+
+async function moveSyringe() {
+  if (overallIteration === 1) {
+    document.getElementById("syringe").style.opacity = 1;
+    let image = document.getElementById("syringe");
+    image.setAttribute("opacity", "1");
+    image.style.pointerEvents = "none";
+    let a1 = anime.timeline({
+      targets: "#syringe",
+      duration: 800,
+      easing: "linear",
+    });
+    let startX = "-1320%";
+    let startY = "-560%";
+    let endX = "200%";
+    let endY = "-248%";
+
+    screenWidth();
+    console.log("DivWidth: ", divWidth);
+
+    if (divWidth < 769) {
+      startX = "-40%";
+      startY = "-940%";
+    }
+
     a1.add({
-        opacity: 0,
-        zIndex: 0,
+      duration: 0,
+      translateY: startY,
+      translateX: startX,
+      rotateZ: 0,
     });
-    a2.add({
-        opacity: 0,
-        zIndex: 0,
+    liftPiston();
+    fillSyringe(1);
+    await new Promise((r) => setTimeout(r, 1000));
+    a1.add({
+      duration: 100,
+      rotateZ: 90,
     }).add({
-        update: function(anim) {
-            document.getElementById("message").innerHTML = messagearr[0];
-        }
+      duration: 1000,
+      translateY: endY,
+      translateX: endX,
     });
 
-    const a3 = anime.timeline({
-        targets: document.getElementById('layer0'),
-        duration: 200,
-        easing: 'linear',
-    }).add({
-        opacity: 0,
-    });
-    const a4 = anime.timeline({
-        targets: document.getElementById('layer1'),
-        duration: 200,
-        easing: 'linear',
-    }).add({
-        opacity: 1,
-    });
-}
-function addsample() {
-    if(sample_selected != -1)
-    {
-        let a1 = anime.timeline({
-            targets: document.getElementById('solution1'),
-            duration: 1200,
-            easing: 'linear',
-        });
+    document.getElementById("observe").style.pointerEvents = "auto";
+    //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
+    document.getElementById("instruction").innerHTML =
+      "Click on Observe button to observe what is happening inside the spectrometer and choose video speed according to your own liking.";
+    //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+    document.getElementById("observation").innerHTML =
+      "Click on Observe button to observe what is happening inside the spectrometer and choose video speed according to your own liking.";
+    overallIteration++;
 
-        a1.add({
-            opacity: 1,
-            // top: '13.4rem',
-            // height: '2rem',
-        }).add({
-            update: function(anim) {
-                document.getElementById("message").innerHTML = messagearr[1];
-                
-                
-            }
-        });
-        sample_collect_flag = 1;
+    if (restartAnimation) {
+      a1.restart();
     }
+
+    restartAnimation = false;
+  }
 }
 
-function addsolvent() {
-    if(sample_collect_flag)
-    {
-            let a1 = anime.timeline({
-            targets: document.getElementById('solution2'),
-            duration: 1200,
-            easing: 'linear',
-        });
+let setupMessages = [
+  "Click on the Sample Beaker option in the Apparatus Menu to introduce it into the workspace.",
+  "Click on the Mass Spectrometer option in the Apparatus Menu to introduce it into the workspace.",
+];
 
-        a1.add({
-            opacity: 1,
-            // top: '9.4rem',
-            // height: '6.0rem',
-        }).add({
-            update: function(anim) {
-                document.getElementById("message").innerHTML = messagearr[2];
-                
-                
-            }
-        });
-        solvent_collect_flag = 1;
+let setup = 0;
+
+function setupMessage() {
+  //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
+  document.getElementById("instruction").innerHTML = setupMessages[setup];
+  //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+  document.getElementById("observation").innerHTML = setupMessages[setup];
+  setup++;
+}
+
+function apparatusSetup(visibleID, oldOption, newOption) {
+  document.getElementById(visibleID).style.visibility = "visible";
+  document.getElementById(oldOption).style.pointerEvents = "none";
+  document.getElementById(newOption).style.pointerEvents = "auto";
+}
+
+setupMessage();
+async function visibility(x) {
+  if (x === 1 && overallIteration === -1) {
+    apparatusSetup("sample-beaker", "sample", "mass-spectrometer");
+    overallIteration++;
+    setupMessage();
+  } else if (x === 2 && overallIteration === 0) {
+    apparatusSetup("spectrometer", "mass-spectrometer", "restart");
+    document.getElementById("sample-beaker").style.cursor = "pointer";
+    overallIteration++;
+    changeMessage();
+  }
+}
+
+let instructionMessages = [
+  "Click on the Sample Beaker to draw 1 ml of the sample (methanol or aspirin) and load it onto the spectrometer inlet of the Mass Spectrometer.",
+];
+let iter1 = -1;
+function changeMessage() {
+  iter1++;
+  //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
+  document.getElementById("instruction").innerHTML = instructionMessages[iter1];
+  //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+  document.getElementById("observation").innerHTML = instructionMessages[iter1];
+}
+
+let iter2 = -1;
+let observationMessages = [
+  "Now observe the zoomed in animation of mass spectromter. The sample is introduced into the vaporisation chamber which is instantly vapourised due to high vacuum and heat.",
+  "Positively charged radical ions are formed by bombardment of beam of high energy electrons.",
+  "The positively charged radical ions are accelerated by perforated negative electrodes",
+  "The ions are sorted and separated by the magnetic field according to their mass/charge ratio.",
+  "Now observe the graph being plotted. These lines demonstrate the molar mass of the compound in the Sample Beaker.",
+];
+
+function observeMessage() {
+  if (restartAnimation) {
+    return;
+  }
+  iter2++;
+  //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
+  document.getElementById("instruction").innerHTML = observationMessages[iter2];
+  //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+  document.getElementById("observation").innerHTML = observationMessages[iter2];
+}
+
+function screenWidth() {
+  divWidth = document.getElementById("workspace").clientWidth;
+}
+
+let originalSimulationHeight =
+  document.getElementById("simulation").clientHeight;
+
+let restartAnimation = false;
+
+async function restart() {
+  apparatusOptions.forEach(function (option) {
+    document.getElementById(option).style.pointerEvents = "none";
+  });
+  document.getElementById("sample").style.pointerEvents = "auto";
+
+  document.getElementById("simulation").style.height = originalSimulationHeight;
+  document.getElementById("animation-video").style.display = "none";
+  document.getElementById("plotted-graph-window").style.display = "none";
+
+  //"head-instructions" is the Heading of the Instructions HTML element that will be visible only in wide screens, i.e., width greater than 768px
+  document.getElementById("head-instructions").innerHTML = "Instructions";
+  //"head-observations" is the Heading of the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+  document.getElementById("head-observations").innerHTML = "Instructions";
+  //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
+  document.getElementById("instruction").innerHTML = "";
+  //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+  document.getElementById("observation").innerHTML = "";
+  overallIteration = -1;
+  iter2 = -1;
+  iter1 = -1;
+  setup = 0;
+  setupMessage();
+  document.getElementById("syringe").style.opacity = 0;
+  document.getElementById("apparatus-bottles").style.display = "block";
+  document.getElementById("apparatus-spectrometer").style.display = "block";
+  document.getElementById("sample-beaker").style.visibility = "hidden";
+
+  document.getElementById("spectrometer").style.visibility = "hidden";
+  document.getElementById("slidecontainer").style.display = "none";
+  restartAnimation = true;
+
+  document.getElementById("sample-beaker").style.cursor = "default";
+}
+
+async function observe() {
+  if (overallIteration === 3) {
+    document.getElementById("observe").style.pointerEvents = "none";
+    document.getElementById("slidecontainer").style.display = "block";
+    document.getElementById("apparatus-bottles").style.display = "none";
+    document.getElementById("apparatus-spectrometer").style.display = "none";
+    document.getElementById("animation-video").style.display = "block";
+    document.getElementById("animation-bottom-right").play();
+
+    //"head-instructions" is the Heading of the Instructions HTML element that will be visible only in wide screens, i.e., width greater than 768px
+    document.getElementById("head-instructions").innerHTML = "Observations";
+    //"head-observations" is the Heading of the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+    document.getElementById("head-observations").innerHTML = "Observations";
+    //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+    document.getElementById("observation").innerHTML = "";
+    //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
+    document.getElementById("instruction").innerHTML = "";
+
+    // Syncing Observation messages with Video Speed
+    let timeOuts = [2000, 5000, 3000, 5000];
+
+    for (let index = 0; index < timeOuts.length; index++) {
+      await new Promise((r) => setTimeout(r, timeOuts[index] * speedFactor));
+      observeMessage();
     }
-}
+    await new Promise((r) => setTimeout(r, 3000 * speedFactor));
 
-function addjrcell() {
-    if(solvent_collect_flag)
-    {
-        let a1 =anime.timeline({
-            targets: document.getElementById('jrcell'),
-            duration: 1200,
-            easing: 'linear'
-        });
+    if (!restartAnimation) {
+      overallIteration++;
 
-        a1.add({
-            opacity: 1,
-        }).add({
-            update: function(anim) {
-                document.getElementById("message").innerHTML = messagearr[3];
-                
-                
-            }
-        });
-        desiccator_flag = 1;   
+      document.getElementById("observe").style.pointerEvents = "auto";
+      //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
+      document.getElementById("instruction").innerHTML =
+        "Click on Observe option in the Control Menu again to see the graph.";
+      //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+      document.getElementById("observation").innerHTML =
+        "Click on Observe option in the Control Menu again to see the graph.";
     }
+  } else if (overallIteration === 4) {
+    document.getElementById("observe").style.pointerEvents = "none";
+    observeMessage();
+
+    document.getElementById("slidecontainer").style.display = "none";
+
+    document.getElementById("animation-video").style.display = "none";
+    document.getElementById("plotted-graph-window").style.display = "block";
+    startAnimation();
+    overallIteration++;
+    setTimeout(function () {
+      //"instruction" is the Instructions HTML element that will be visible only in wide screens, i.e, width greater than 768px
+      document.getElementById("instruction").innerHTML =
+        "Click on Restart option in the Control Menu to restart the experiment from scratch.";
+      //"observation" is the Instructions HTML element that will be visible only in small screens, i.e., width smaller than 769px
+      document.getElementById("observation").innerHTML =
+        "Click on Restart option in the Control Menu to restart the experiment from scratch.";
+    }, 8000);
+  }
 }
 
-function filldropper1() {
-    if(desiccator_flag)
-    {
-        let a1 =anime.timeline({
-            targets: document.getElementById('dropper1'),
-            duration: 300,
-            easing: 'linear'
-        });
-        let a2 =anime.timeline({
-            targets: document.getElementById('sol1'),
-            delay:300,
-            duration: 900,
-            easing: 'linear'
-        });
-        a1.add({
-            opacity: 1,
-        });
-        a2.add({
-            opacity: 1,
-        });
-        let a3 =anime.timeline({
-            targets: document.getElementById('collectedsol1'),
-            delay:2500,
-            duration: 1200,
-            easing: 'linear'
-        });
-        a3.add({
-            opacity: 0,
-        }).add({
-            update: function(anim) {
-                document.getElementById("message").innerHTML = messagearr[4];    
-            }
-        });
-        fill_dropper_flag = 1;
-    }
-}
+let sample = document.getElementById("sample-beaker");
+sample.addEventListener("click", function () {
+  moveSyringe();
+});
 
-function emptydropper2() {
-    if(prepration_stage_flag)
-    {
-        let a1 =anime.timeline({
-            targets: document.getElementById('layer1'),
-            duration: 300,
-            easing: 'linear'
-        }); 
-        a1.add({
-            opacity: 0,
-        })  
-    }
-    if(fill_dropper_flag && prepration_stage_flag!=1)
-    {
-        let a1 =anime.timeline({
-            targets: document.getElementById('dropper2'),
-            duration: 300,
-            easing: 'linear'
-        });
-        let a2 =anime.timeline({
-            targets: document.getElementById('sol2'),
-            delay:100,
-            duration: 600,
-            easing: 'linear'
-        });
-        let a3 =anime.timeline({
-            targets: document.getElementById('slit'),
-            delay:600,
-            duration: 900,
-            easing: 'linear'
-        });
-        a1.add({
-            opacity: 1,
-        });
-        a2.add({
-            opacity: 1,
-        }).add({
-            opacity: 0,
-        });
-        a3.add({
-            opacity: 1,
-        }).add({
-            update: function(anim) {
-                document.getElementById("message").innerHTML = messagearr[5];   
-            }
-        });
-        empty_dropper_flag = 1;
-        prepration_stage_flag = 1;
-    }  
-}
-
-let clickFlag = 0;
-let startAnimFlag = 1;
-let graphFlag = 0;
-
+let slider = document.getElementById("slider");
+let vid = document.getElementById("animation-bottom-right");
+slider.oninput = function () {
+  videoSpeed = slider.value;
+  vid.playbackRate = videoSpeed;
+  speedFactor = 1 / videoSpeed;
+};

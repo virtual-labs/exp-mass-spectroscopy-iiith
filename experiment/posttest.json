@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. In a mass spectrometer, the sample that has to be analysed is bombarded with which of the following?",
+      "answers": {
+        "a": "Protons",
+        "b": "Electrons",
+        "c": "Neutrons",
+        "d": "Alpha particles"
+      },
+      "explanations": {
+        "a": "",
+        "b": "In a mass spectrometer, the sample which is to be analysed is bombarded with electrons. This causes some of the sample's molecules to break up into positively charged fragments or simply become positively charged without fragmenting.",
+        "c": "",
+        "d": ""
+      },
+      "difficulty": "beginner",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "2. Which of the following statements is not true about mass spectrometry?",
+      "answers": {
+        "a": "Impurities of masses different from the one being analysed interferes with the result",
+        "b": "It has great sensitivity",
+        "c": "It is suitable for data storage",
+        "d": "It is suitable for library retrieval"
+      },
+      "explanations": {
+        "a": "Impurities of masses different from the one being analysed do not interfere with the result in mass spectroscopy. This is a major advantage of this technique.",
+        "b": "Sensitivity of any spectrophotometric technique depends on the spectrophotometer and not on the working principle of it. Infact, impurities do not interfere with the sample analysed.",
+        "c": "Data storage is not correlated with the type of spectrometry used.",
+        "d": "Library retrieval is irrespective of  the type of spectrometry used."
+      },
+      "difficulty": "beginner",
+      "correctAnswer": "a"
+    },
+    {
+      "question": "3. Decide whether a statement about resolution (R) is true or not.",
+      "answers": {
+        "a": "The higher the mass spectrometric resolution, the worse the distinction between two only slightly differing m/z.",
+        "b": "Assuming a resolution of 1000, you can distinguish between m/z 10.00 and m/z 10.01.",
+        "c": "Assuming a resolution of 1000, you can distinguish between m/z 1000.00 and m/z 1000.01.",
+        "d": "The higher the mass spectrometric resolution, the better the distinction between two only slightly differing m/z."
+      },
+      "explanations": {
+        "a": "Higher resolutions means the distinction between two slightly differing peaks should be better.",
+        "b": "A resolution of 1000 would mean distinction between two peaks with a difference of 0.001.",
+        "c": "A resolution of 1000 would mean distinction between two peaks with a difference of 0.001.",
+        "d": "Higher resolutions means the distinction between two slightly differing peaks should be better."
+      },
+      "difficulty": "intermediate",
+      "correctAnswer": "d"
+    },
+    {
+      "question": "4. What do the heights of the peaks represent in the mass spectrum?",
+      "answers": {
+        "a": "number of ions",
+        "b": "relative abundance of each ion",
+        "c": "average atomic mass",
+        "d": "charge:mass ratio"
+      },
+      "explanations": {
+        "a": "the peak of any m/z ratio is not indicative of the number of ions detected by the detector.",
+        "b": "peak is indicative of the relative abundance of any ion with respect to all other peaks.",
+        "c": "average atomic mass of any fragment of molecule cannot be determined from the peak height.",
+        "d": "mass/charge ratio is the range of x axis and height of peak does not relate to it."
+      },
+      "difficulty": "intermediate",
+      "correctAnswer": "b"
+    },
+    {
+      "question": "5. Which of the following formulae is consistent with a molecular ion of m/z 73 in a mass spectrometry experiment?",
+      "answers": {
+        "a": "C<sub>3</sub>H<sub>8</sub>N<sub>2</sub>",
+        "b": "C<sub>4</sub>H<sub>11</sub>N",
+        "c": "C<sub>4</sub>H<sub>10</sub>O",
+        "d": "C<sub>3</sub>H<sub>5</sub>NO"
+      },
+      "explanations": {
+        "a": "m/z ratio for this molecular ion is 72.",
+        "b": "m/z ratio  for this molecular ion is 73.",
+        "c": "m/z ratio  for this molecular ion is 74.",
+        "d": "m/z ratio  for this molecular ion is 71."
+      },
+      "difficulty": "advanced",
+      "correctAnswer": "b"
+    }
+  ]
+}
